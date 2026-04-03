@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { QueryProvider } from "@/components/shared/query-provider";
@@ -31,7 +30,6 @@ export default function RootLayout({
           {children}
         </QueryProvider>
         <Toaster position="bottom-right" richColors />
-        <SpeedInsights />
         <GoogleAnalytics gaId="G-3MR8Q9MB7X" />
       </body>
     </html>

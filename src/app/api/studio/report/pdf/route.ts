@@ -56,7 +56,7 @@ ${htmlContent}
 
     let browser;
     const isServerless =
-      process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME;
+      process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NETLIFY;
 
     if (isServerless) {
       browser = await puppeteer.launch({
